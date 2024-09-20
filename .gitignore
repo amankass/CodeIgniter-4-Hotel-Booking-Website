@@ -1,1 +1,42 @@
-writable
+# CodeIgniter 4 specific
+/writable/cache/
+/writable/logs/
+/writable/session/
+/writable/uploads/
+/app/Config/Environment.php
+/app/Config/Constants.php
+
+# Environment files
+.env
+
+# Composer dependencies
+/vendor/
+
+# Node dependencies
+/node_modules/
+
+# Build directories (if applicable)
+/public/build/
+/public/assets/build/
+
+# IDE and Editor directories
+/.vscode/
+/.idea/
+/*.suo
+/*.ntvs*
+/*.njsproj
+/*.sln
+
+# OS Generated Files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Temporary Files
+*.tmp
+*.temp
+
+# Coverage reports
+/coverage/
