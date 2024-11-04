@@ -17,65 +17,92 @@
      href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css"/>
    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/src/download.png">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+     <!-- Bootstrap JS Bundle -->
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
         <title>Booking SignUp</title>
     <style>
     body {
         background-color: #f8f9fa;
         padding-top: 70px;
     }
-
-    
-    #Tonav2{
-    height: 70px;
-}
-.ms-auto{
-    margin-right: 0%;
-    display: flex;
-    gap: 10px;
-    margin-top: 20px;
-}
-        .navbar {
-            background-color: #800000;
-            height: 49px;
-        }
-
-        .navbar-brand {
-            font-size: 24px;
-            font-weight: bold;
-            color: #FFD700;
-        }
-
-        .nav-link {
-            color: #ffffff;
-            font-weight: 500;
-        }
-
-        .navbar-brand:hover,
-        .nav-link:hover {
-            color: #FFA500;
-        }
-
-        /* Upper Nav Styling */
-        .upper-nav {
+/* Upper Header Styling */
+.upper-header {
             background-color: #800000;
             color: #f8f9fa;
-            padding-top: 0px;
-            padding-bottom: 10px;
-            margin-top: 0%;
-            justify-content: center;
+            padding: 5px 0;
+            position: fixed;
+            top: 0;
+            width: 100%;
+            height: 60px;
+            z-index: 1030; /* Above the main navbar */
+            transition: background-color 0.3s ease;
         }
-
-        .upper-nav .navbar-text {
+      
+        .upper-header .navbar-text {
             color: #f8f9fa;
             font-size: 14px;
+            transition: color 0.3s ease;
         }
 
-        .upper-nav a {
+        .upper-header .nav-link {
             color: #f8f9fa;
+            transition: color 0.3s ease;
+        }
+
+        .upper-header .nav-link:hover {
+            color: #FFA500; /* Same hover color as main navbar */
             text-decoration: none;
         }
 
-    .book-btn {
+        /* Main Navbar Styling */
+        .main-navbar {
+            background-color: #800000;
+            color: #FFD700;
+            padding: 10px 0;
+            position: fixed;
+            top: 55px; /* Height of the upper header */
+            width: 100%;
+            z-index: 1020;
+            transition: opacity 0.3s ease;
+        }
+
+        .main-navbar .navbar-brand {
+            font-size: 24px;
+            font-weight: bold;
+            color: white;
+            transition: color 0.3s ease;
+        }
+
+        .main-navbar .navbar-brand:hover {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        .main-navbar .nav-link {
+            color: #ffffff;
+            font-weight: 500;
+            margin-right: 15px; /* Added gap between nav links */
+            transition: color 0.3s ease;
+        }
+
+        .main-navbar .nav-link:hover {
+            color: #FFA500;
+            text-decoration: none;
+        }
+
+        /* Book Now Button Styling */
+        .book-btn {
         /* border: 2px solid transparent; No border initially */
         transition: border-color 0.3s ease; /* Smooth transition */
         background: url(klematis.jpg) repeat;
@@ -90,51 +117,81 @@
         background-color: #FFA500;
     }
 
+        /* Carousel Styling (If any) */
+        .carousel-item img {
+            height: 750px;
+            object-fit: cover;
+        }
+
+        /* Dropdown Menu Styling */
+        .dropdown-menu {
+            background-color: #800000;
+            border: none;
+        }
+      
+        .dropdown-item {
+            color: #ffffff;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .dropdown-item:hover {
+        background-color: transparent;
+        color: #FFA500;
+        border: none;
+        }
+        .main-navbar .nav-link.dropdown-toggle:hover,
+.main-navbar .nav-link.dropdown-toggle:focus {
+    border: none;          /* Removes any border */
+    outline: none;         /* Removes the outline */
+    box-shadow: none;      /* Removes any box-shadow */
+}
+        /* Adjustments for Responsive Upper Header */
+        @media (max-width: 768px) {
+            .upper-header .navbar-text {
+                font-size: 12px;
+            }
+            .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Adjusts the dropdown position */
+    }
+
+    .nav-item.dropdown .dropdown-toggle::after {
+        transform: rotate(-180deg);
+    }
+            .upper-header .ms-auto {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+            .upper-header i{
+                font-size: 9px;
+            }
+            .main-navbar {
+                top: 55px; /* Adjust if upper header height changes on small screens */
+            }
+
+            .main-navbar .nav-link {
+                margin-right: 0; /* Remove right margin on small screens */
+                margin-bottom: 10px; /* Add bottom margin for spacing */
+            }
+
+            .navbar-nav {
+                gap: 10px; /* Add gap between nav items in collapsed menu */
+            }
+}
+
     .carousel-item img {
     height: 750px; /* Adjust height as needed */
     object-fit: cover; /* Ensures images cover the area without distortion */
 }
 
-    /* Hover dropdown effect */
-    .nav-item.dropdown:hover .dropdown-menu {
-        display: block;
-        margin-top: 0; /* Adjusts the dropdown position */
-    }
-
-    .navbar .nav-link:hover,
-    .dropdown-menu .dropdown-item:hover {
-        color: #FFA500; /* Orange hover effect */
-        background-color: transparent;
-    }
-
-    /* Dropdown Menu Styling */
-    .dropdown-menu {
-        background-color: #800000; /* Match navbar background */
-        border: none; /* Remove default border */
-    }
-
-    .dropdown-item {
-        color: #ffffff;
-    }
-
-    /* Dropdown hover effect */
-    .dropdown-item:hover {
-        background-color: transparent;
-        color: #FFA500; /* Same hover effect as navbar items */
-    }
-
-
-
-
-
-
     .form-select:focus {
             border-color: #007bff;
             box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
         }
+
     .registration-container {
-        width: 900px;
-        margin-top: 50px;
+        width: 650px;
+        margin-top: 5%;
         padding: 30px;
         border-radius: 8px;
         background-color: white;
@@ -147,137 +204,171 @@
     }
 
     .btn-info {
-        background-color: #040720;
-        border-color: #007bff;
-        color: #f8f9fa;
+        transition: border-color 0.3s ease; /* Smooth transition */
+        background: #800000;
+        border: 2px solid white;
+        width: 150px;
+        color: #f0f4f8;
+        font-weight: bold;
     }
 
     .btn-info:hover {
-        background-color: #040720;
-        text-decoration: wavy;
-        text-decoration: underline;
-        color: #FFA500;
+        border-color: #800000; /* Blue border on hover */
+        background-color: #FFA500;
     }
-
-    /* .navbar {
-        background-color: #040720;
-        padding: 0.5rem 1rem;
-    }
-
-    .navbar-brand {
-        font-size: 24px;
-        font-weight: bold;
-        color: white;
-    }
-
-    .nav-link {
-        color: white;
-        font-weight: 500;
-    }
-
-    .nav-link:hover {
-        color: #ffcc00;
-    } */
+.text-start{
+    margin-top: -20px;
+}
     </style>
 </head>
 
 <body>
-  <!-- Upper Nav: Hotel Name, Location, and Email -->
-  <nav id="Tonav" class="navbar navbar-expand-lg fixed-top upper-nav">
-        <div class="container">
-            <a class="navbar-brand" href="/">HOTEL</a>
-            <div class="ms-auto">
-                <span class="navbar-text me-3 d-flex">
-                    <i class="fas fa-map-marker-alt mt-1"></i><a href="#" class="nav-link">&nbsp;  Addis Ababa, Ethiopia</a>
-                </span>
-                <span class="navbar-text d-flex">
-                    <i class="fas fa-envelope mt-1"></i><a href="#" class="nav-link">&nbsp;  info@ayahotel.com</a> 
-                </span>
-                <span class="navbar-text d-flex">
-                    <i class="fas fa-user-alt mt-1"></i><a href="auth/register" class="nav-link">&nbsp;  Login | SignUp</a>
-                </span>
-            </div>
-        </div>
-    </nav>
-  <!-- Lower Nav: Centered Menu Items -->
-<nav id="Tonav2" class="navbar navbar-expand-lg navbar-light fixed-top mt-5">
+  <!-- Upper Header -->
+  <nav class="navbar upper-header">
     <div class="container">
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav mx-auto gap-5">
-                <li class="nav-item">
-                    <a class="nav-link" href="/">HOME</a>
-                </li>
-                <!-- Accommodation with Dropdown -->
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="accommodationDropdown" role="button"
-                        data-bs-toggle="dropdown" aria-expanded="false">
-                        ACCOMMODATION
-                    </a>
-                    <ul class="dropdown-menu" aria-labelledby="accommodationDropdown">
-                        <li><a class="dropdown-item" href="accommodation/standard">Standard Room</a></li>
-                        <li><a class="dropdown-item" href="accommodation/Premium">Premium Room</a></li>
-                        <li><a class="dropdown-item" href="accommodation/Family">Family Room</a></li>
-                        <li><a class="dropdown-item" href="accommodation/Executive">Executive Room</a></li>
-                        <li><a class="dropdown-item" href="accommodation/Presidential">Presidential Room</a></li>
-                    </ul>
-                </li>
-                <li class="nav-item dropdown">
-                    <a  class="nav-link dropdown-toggle" href="#" id="accommodationDropdown" role="button"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    SERVICES</a>
-                    <ul class="dropdown-menu" aria-labelledby="accommodationDropdown">
-                        <li><a class="dropdown-item" href="#">Restaurant and Bar</a></li>
-                        <!-- <li><a class="dropdown-item" href="#">Recreation</a></li> -->
-                        <li><a class="dropdown-item" href="#">Events</a></li>
-                    </ul>
-                </li>
-            
-                <li class="nav-item">
-                    <a class="nav-link" href="/gallary">GALLERY</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/contact">CONTACT</a>
-                </li>
-            </ul>
-        </div>
-        <!-- Book button aligned to the center -->
-        <div class="d-flex justify-content-center">
-            <a href="#" class="btn btn-warning book-btn">BOOK NOW</a>
+        <div class="d-flex w-100 justify-content-end">
+            <!-- Location Info -->
+            <span class="navbar-text me-3 d-flex align-items-center">
+                <i class="fas fa-map-marker-alt me-1"></i> Addis Ababa, Ethiopia
+            </span>
+            <!-- Email Info -->
+            <span class="navbar-text me-3 d-flex align-items-center">
+                <i class="fas fa-envelope me-1"></i> 
+                <a href="mailto:info@ayahotel.com" class="nav-link p-0">info@ayahotel.com</a>
+            </span>
+            <!-- Profile and Logout for Logged-in Users -->
+            <?php if (session()->get('logged_in')): ?>
+                <span class="navbar-text d-flex align-items-center">
+                    <i class="fas fa-user-alt me-1"></i>
+                    <a href="<?= site_url('/dashboard'); ?>" class="nav-link p-0 me-2">Profile</a>
+                    <a href="<?= site_url('auth/logout'); ?>" class="nav-link p-0">Logout</a>
+                </span>
+            <?php else: ?>
+            <!-- Login | SignUp for Guests -->
+            <span class="navbar-text d-flex align-items-center">
+                <i class="fas fa-user-alt me-1"></i> 
+                <a href="<?= site_url('auth/'); ?>" class="nav-link p-0">Login | SignUp</a>
+            </span>
+            <?php endif; ?>
         </div>
     </div>
 </nav>
-<script>
-        const topnav =document.getElementById('Tonav');
-        window.addEventListener('scroll', ()=>{
-let scrollposion =window.scrollY;
-if(scrollposion>100){
-    topnav.style.opacity='0.5';
-}else{
-    topnav.style.opacity='1';
-}
-  });
 
-        const topnav2 =document.getElementById('Tonav2');
-        window.addEventListener('scroll', ()=>{
-let scrollposion =window.scrollY;
-if(scrollposion>100){
-    topnav2.style.opacity='0.5';
-}else{
-    topnav2.style.opacity='1';
-}
-  });
+    <!-- Main Navbar -->
+    <nav class="navbar main-navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbarNav"
+                aria-controls="mainNavbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <a class="navbar-brand" href="/">HOTEL</a>
+            <div class="collapse navbar-collapse" id="mainNavbarNav">
+                <ul class="navbar-nav mx-auto gap-4">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">HOME</a>
+                    </li>
+                    <!-- Accommodation with Dropdown -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="<?= site_url('/accommodations') ?>" id="accommodationDropdown">
+                            ACCOMMODATION
+                        </a>
+                        <!-- <ul class="dropdown-menu" aria-labelledby="accommodationDropdown">
+                            <li><a class="dropdown-item" href="<?= site_url('accommodation/type/Standard Room') ?>">Standard Room</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item" href="<?= site_url('accommodation/type/Premium Room') ?>">Premium Room</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item" href="<?= site_url('accommodation/type/Family Room') ?>">Family Room</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item" href="<?= site_url('accommodation/type/Executive Room') ?>">Executive Room</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item" href="<?= site_url('accommodation/type/Presidential Room') ?>">Presidential Room</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item" href="/accommodations">All Accommodation</a></li>
+                        </ul> -->
+                    </li>
+                    <!-- Services with Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="servicesDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            SERVICES
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="servicesDropdown">
+                            <li><a class="dropdown-item"   href="<?= site_url('Service/restourant') ?>">Restaurant and Bar</a></li>
+                            <hr style="color: #f0f4f8; margin-top:2px; margin-bottom: 0px">
+                            <li><a class="dropdown-item"  href="<?= site_url('Service/event') ?>">Events</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/gallary">GALLERY</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/contact">CONTACT</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Book Now Button -->
+            <div class="d-flex justify-content-center">
+                <a href="#" class="btn btn-warning book-btn">BOOK NOW</a>
+            </div>
+        </div>
+    </nav>
+<script>    
+// Dropdown on Hover for Desktop
+const dropdownElements = document.querySelectorAll('.nav-item.dropdown');
+dropdownElements.forEach(function (dropdown) {
+    // Check if the device is desktop
+    if (window.innerWidth > 768) {
+        // Initialize Bootstrap dropdown
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const bsDropdown = new bootstrap.Dropdown(dropdownToggle);
+        // Show dropdown on mouseenter
+        dropdown.addEventListener('mouseenter', function () {
+            bsDropdown.show();
+        });
+        // Hide dropdown on mouseleave
+        dropdown.addEventListener('mouseleave', function () {
+            bsDropdown.hide();
+        });
+    }
+});
+// Optional: Update dropdown behavior on window resize
+window.addEventListener('resize', function () {
+    dropdownElements.forEach(function (dropdown) {
+        const dropdownToggle = dropdown.querySelector('.dropdown-toggle');
+        const bsDropdown = bootstrap.Dropdown.getInstance(dropdownToggle);
+        if (window.innerWidth > 768) {
+            if (!bsDropdown) {
+                // Initialize if not already
+                new bootstrap.Dropdown(dropdownToggle);
+            }
+            // Show dropdown on mouseenter
+            dropdown.addEventListener('mouseenter', function () {
+                bsDropdown.show();
+            });
+            // Hide dropdown on mouseleave
+            dropdown.addEventListener('mouseleave', function () {
+                bsDropdown.hide();
+            });
+        } else {
+            if (bsDropdown) {
+                bsDropdown.dispose();
+            }
+        }
+    });
+});
+
+        AOS.init();
+        // Handle Scroll Opacity for Main Navbar
+        const mainNavbar = document.querySelector('.main-navbar');
+        window.addEventListener('scroll', () => {
+            let scrollPosition = window.scrollY;
+            if (scrollPosition > 100) {
+                mainNavbar.style.opacity = '0.8';
+            } else {
+                mainNavbar.style.opacity = '1';
+            }
+        });
     </script>
-
-
-
-
-
-
-
 
 
     <div class="row justify-content-center">
@@ -297,7 +388,7 @@ if(scrollposion>100){
 <form action="<?= base_url('auth/registerUser') ?>" method="post" class="mb-3 row g-3">
                 <?= csrf_field(); ?>
                 <!-- Title -->
-            <div class="form-group mb-3 col-md-6">
+            <!-- <div class="form-group mb-3 col-md-6">
                 <label for="title">Title</label>
                 <select class="form-select" name="title" id="title" required>
                     <option value="">Choose...</option>
@@ -309,7 +400,7 @@ if(scrollposion>100){
                 <span class="text-danger text-sm">
                     <?= isset($validation) ? display_form_errors($validation, 'title') : '' ?>
                 </span>
-            </div>
+            </div> -->
                 <div class="form-group mb-3 col-md-6">
                     <label for="name">Full Name</label>
                     <input type="text" class="form-control" name="name" placeholder="Enter Your Name" required>
@@ -317,30 +408,37 @@ if(scrollposion>100){
                         <?= isset($validation) ? display_form_errors($validation, 'name') : '' ?>
                     </span>
                 </div>
-                <div class="form-group mb-3 col-md-4">
-                    <label for="date">Enter Your Birthday</label>
-                    <input type="date" class="form-control" name="date" placeholder="Enter Your birthday" required>
-                    <span class="text-danger text-sm">
-                        <?= isset($validation) ? display_form_errors($validation, 'date') : '' ?>
-                    </span>
-                </div>
-                <div class="form-group mb-3 col-md-3">
+                <div class="form-group mb-3 col-md-6">
                     <label for="phone">Phone</label>
                     <input type="tel" id="phone" class="form-control" name="phone" placeholder="Enter Phone" required>
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'phone') : '' ?>
                     </span>
                 </div>
-                <div class="form-group mb-3 col-md-5">
+                <div class="form-group mb-3 col-md-6">
                     <label for="email">Email</label>
                     <input type="email" class="form-control" name="email" placeholder="Enter Your Email" required>
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'email') : '' ?>
                     </span>
                 </div>
-               
+                <div class="form-group mb-3 col-md-6">
+                    <label for="password">Password</label>
+                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password"
+                        required>
+                    <span class="text-danger text-sm">
+                        <?= isset($validation) ? display_form_errors($validation, 'password') : '' ?>
+                    </span>
+                </div>
+                <!-- <div class="form-group mb-3 col-md-4">
+                    <label for="date">Enter Your Birthday</label>
+                    <input type="date" class="form-control" name="date" placeholder="Enter Your birthday" required>
+                    <span class="text-danger text-sm">
+                    <?= isset($validation) ? display_form_errors($validation, 'date') : '' ?>
+                    </span>
+                </div> -->
                  <!-- Nationality Dropdown -->
-                 <div class="form-group mb-3 col-md-6">
+                 <!-- <div class="form-group mb-3 col-md-6">
                     <label for="nationality">Nationality</label>
                     <select class="form-select" name="nationality" required>
                         <option value="">Please select one</option>
@@ -572,10 +670,10 @@ if(scrollposion>100){
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'nationality') : '' ?>
                     </span>
-                </div>
+                </div> -->
 
-<!-- Nationality Dropdown -->
-<div class="form-group mb-3 col-md-6">
+<!-- Country Dropdown -->
+<!-- <div class="form-group mb-3 col-md-6">
                     <label for="country">Country</label>
                     <select class="form-select" autocomplete="country" id="country" name="country">
     <option value="">country</option>
@@ -835,9 +933,9 @@ if(scrollposion>100){
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'nationality') : '' ?>
                     </span>
-                </div>
+                </div> -->
 
-                <div class="form-group mb-3 col-md-6">
+                <!-- <div class="form-group mb-3 col-md-6">
                     <label for="state">State</label>
                     <input type="text" class="form-control" name="state" placeholder="Enter Your state" required>
                     <span class="text-danger text-sm">
@@ -845,10 +943,10 @@ if(scrollposion>100){
                     </span>
                 </div>
                 <div class="form-group mb-3 col-md-6">
-                    <label for="city">City</label>
-                    <input type="text" class="form-control" name="city" placeholder="Enter Your City" required>
+                    <label for="City">City</label>
+                    <input type="text" class="form-control" name="City" placeholder="Enter Your City" required>
                     <span class="text-danger text-sm">
-                        <?= isset($validation) ? display_form_errors($validation, 'city') : '' ?>
+                        <?= isset($validation) ? display_form_errors($validation, 'City') : '' ?>
                     </span>
                 </div>
                 <div class="form-group mb-3 col-md-6">
@@ -857,33 +955,23 @@ if(scrollposion>100){
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'street') : '' ?>
                     </span>
-                </div>
-                <div class="form-group mb-3 col-md-6">
+                </div> -->
+                <!-- <div class="form-group mb-3 col-md-6">
                     <label for="zipcode">Postal/Zipcode</label>
                     <input type="text" class="form-control" name="zipcode" placeholder="Enter Your Postal/Zipcode" required>
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'zipcode') : '' ?>
                     </span>
-                </div>
-
-
-
-                <div class="form-group mb-3 col-md-6">
-                    <label for="password">Password</label>
-                    <input type="password" class="form-control" name="password" placeholder="Enter Your Password"
-                        required>
-                    <span class="text-danger text-sm">
-                        <?= isset($validation) ? display_form_errors($validation, 'password') : '' ?>
-                    </span>
-                </div>
-                <div class="form-group mb-3 col-md-6">
+                </div> -->
+               
+                <!-- <div class="form-group mb-3 col-md-6">
                     <label for="passwordConf">Confirm Password</label>
                     <input type="password" class="form-control" name="passwordConf" placeholder="Confirm Password"
                         required>
                     <span class="text-danger text-sm">
                         <?= isset($validation) ? display_form_errors($validation, 'passwordConf') : '' ?>
                     </span>
-                </div>
+                </div> -->
                 <div class="form-group mb-3 col-md-6">
                     <button type="submit" class="btn btn-info btn-block">Sign Up</button>
                 </div>
@@ -894,14 +982,12 @@ if(scrollposion>100){
             </div>
         </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
-     <script>
+     <!-- <script>
    const phoneInputField = document.querySelector("#phone");
    const phoneInput = window.intlTelInput(phoneInputField, {
      utilsScript:
        "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
    });
- </script>
+ </script> -->
 </body>
-
 </html>
