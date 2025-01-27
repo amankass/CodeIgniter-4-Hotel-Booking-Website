@@ -1,0 +1,591 @@
+body {
+    background-color: #faf7f0;
+    padding-top: 50px;
+    overflow-x: hidden;
+}
+
+/* Adjust search section Css Start*/
+.search-section {
+    position: absolute;
+    margin: auto;
+    width: 100%;
+    padding: 2rem 0;
+    color: #ffffff;
+    background-color: rgba(128, 0, 0, 0.5);
+    z-index: 10;
+    text-align: center;
+}
+
+.search-section h2 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-family: 'Georgia', serif;
+}
+
+.search-section p {
+    font-size: 1.1rem;
+    font-family: 'Georgia', serif;
+}
+
+.search-section .form-label {
+    font-size: 1.1rem;
+    color: #ffffff;
+    margin: auto;
+}
+
+.search-section input[type="date"] {
+    background-color: #f9f9f9;
+    color: #333;
+    border: 1px solid #cccccc;
+    padding: 0.8rem;
+}
+
+div .search-btn {
+    transition: border-color 0.3s ease;
+    background: url(klematis.jpg) repeat;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+}
+
+div .search-btn:hover {
+    border-color: white;
+    background-color: #FFA500;
+}
+
+/* Adjust search section Css Start*/
+
+
+/* accommodation Section */
+section .card_body {
+    background-color: #faf7f0;
+    margin-top: -9%;
+}
+
+section .card_body h2 {
+    margin-top: 5rem;
+    font-weight: bold;
+    color: #040720;
+    font-size: 30px;
+    color: #040720;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1072px) {
+    section .card_body {
+        margin-top: -15%;
+    }
+}
+
+@media (max-width: 641px) {
+    section .card_body {
+        margin-top: -20%;
+    }
+}
+
+@media (max-width: 482px) {
+    section .card_body {
+        margin-top: -25%;
+    }
+}
+
+
+.card_body .room_image {
+    height: 31.5rem;
+}
+
+section .card_body .cards {
+    height: 100%;
+    width: 85%;
+    margin: auto;
+}
+
+section .card_body .card_body2 h5 {
+    margin-top: -2%;
+    font-weight: bold;
+}
+
+.card_body .card_body2 .break_image {
+    width: 8rem;
+    margin: auto;
+    position: relative;
+    top: -0.5rem;
+}
+
+.card_body .card_body2 .example_d {
+    color: black;
+    text-transform: uppercase;
+    background: #ffffff;
+    height: 45px;
+    border: 2px solid #20bf6b;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    font-weight: bolder;
+}
+
+.card_body .card_body2 .example_d:hover {
+    color: white;
+    background-color: #20bf6b;
+    font-weight: bolder;
+    transition: all 0.3s ease 0s;
+}
+
+@media (max-width: 768px) {
+    section .card_body .cards {
+        width: 95%;
+    }
+
+    .search-section {
+        margin-top: 5%;
+    }
+}
+
+@media (max-width: 1000px) {
+    section .card_body .cards {
+        width: 96%;
+    }
+}
+
+@media (max-width: 1246px) {
+    section .card_body .cards h5 {
+        font-size: 16px;
+    }
+
+    section .card_body .cards .card_body2 p {
+        font-size: 13px;
+    }
+
+    section .card_body .cards .card_body2 ul {
+        font-size: 13px;
+    }
+
+    section .card_body .cards .card_body2 .example_d {
+        font-size: 14px;
+        height: 35px;
+    }
+
+    .card_body .cards {
+        height: 93%;
+    }
+}
+
+/* Privious and Next button Css Start */
+.slide_prev {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.slide_next {
+    position: absolute;
+    top: 50%;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.Prev_room {
+    position: absolute;
+    margin-top: 15rem;
+    left: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.Next_room {
+    position: absolute;
+    margin-top: 15rem;
+    right: 10px;
+    transform: translateY(-50%);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    cursor: pointer;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.home_slides img {
+    object-fit: cover;
+    margin-top: 0%;
+}
+
+div .home_slides img {
+    height: 750px;
+    object-fit: cover;
+}
+
+div .home_slides h5 {
+    font-size: 45px;
+    color: white;
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+}
+
+div .home_slides p {
+    font-weight: bolder;
+    font-size: 18px;
+    color: white;
+    font-family: 'Georgia', 'Times New Roman', serif;
+}
+
+div .home_slides .btn1 {
+    transition: border-color 0.3s ease;
+    background: #800000;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+}
+
+div .home_slides .btn1:hover {
+    border-color: white;
+    color: #040720;
+}
+
+@media (max-width: 768px) {
+    div .home_slides h5 {
+        font-size: 1.7rem;
+    }
+
+    div .home_slides p {
+        font-size: 1.2rem;
+    }
+
+    div .home_slides .btn1 {
+        font-size: 1rem;
+        padding: 0.4rem 0.8rem;
+    }
+
+}
+
+/* About Section */
+.about-section {
+    background-color: #faf7f0;
+}
+
+.about-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #040720;
+    margin: auto;
+    font-family: 'Georgia', serif;
+    text-transform: uppercase;
+}
+
+.about-section .breakline {
+    width: 11rem;
+    margin-top: -1.5rem;
+}
+
+.about-section .img-wrapper {
+    overflow: hidden;
+    border-radius: 8px;
+    margin-top: 2.5rem;
+    max-width: 100%;
+}
+
+.about-section .img-wrapper img {
+    width: 100%; 
+    height: auto; 
+    border-radius: 8px; 
+}
+
+@media (max-width: 768px) {
+    .about-section .img-wrapper {
+        margin-top: -1rem; 
+    }
+
+    .about-section .img-wrapper img {
+        width: 100%; 
+    }
+}
+
+.about-section .img-wrapper img {
+    transition: transform 0.3s ease;
+}
+
+.about-section .img-wrapper:hover img {
+    transform: scale(1.1);
+}
+
+.about-section .mein_about_card {
+    margin-top: -2%;
+}
+
+.about-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 200%;
+    height: 150px;
+    animation: waveAnimation 10s linear infinite;
+    z-index: -1;
+}
+
+.about-section p {
+    font-size: 16px;
+    line-height: 1.6;
+    color: #333;
+}
+
+
+
+.explormore {
+    margin-left: 43%;
+    margin-bottom: 2rem;
+}
+
+.explormore .btn-exp {
+    transition: border-color 0.3s ease;
+    background: #800000;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+
+}
+
+.explormore .btn-exp:hover {
+    border-color: #800000;
+}
+
+.slider {
+    position: relative;
+
+    max-height: 600px;
+    margin-top: -2%;
+    overflow: hidden;
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+    background-color: #f5eceb;
+}
+
+.slides img {
+    width: 100%;
+    max-height: 600px;
+    display: block;
+}
+
+div .restaurant_btn {
+    padding: 10px 20px;
+    border-color: white;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 6px;
+}
+
+div .restaurant_btn:hover {
+    border-color: white;
+    background-color: #800000;
+
+}
+
+.thumbnail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 0.2rem;
+    background-color: #faf7f0;
+}
+
+.thumbnails {
+    display: flex;
+    overflow: hidden;
+}
+
+.thumbnails img {
+    width: 100px;
+    margin: 0 5px;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.thumbnails img:hover {
+    transform: scale(1.1);
+}
+
+/* Facilities Section */
+.facilities-section {
+    background-color: #faf7f0;
+    padding: 50px 0;
+}
+
+.facilities-section h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: #040720;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-family: 'Georgia', serif;
+}
+
+.facilities-section img {
+    width: 11rem;
+    margin-left: 35rem;
+    margin-top: -3rem;
+    max-width: 100%;
+    height: auto;
+}
+
+@media (max-width: 1246px) {
+    .facilities-section img {
+        width: 9rem;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: -2rem;
+        display: block;
+    }
+}
+
+
+.btn-primary {
+    background-color: #040720;
+    border-color: #007bff;
+    color: #f8f9fa;
+}
+
+.btn-primary:hover {
+    background-color: #800000;
+    color: #FFA500;
+    text-decoration: wavy;
+    text-decoration: underline;
+}
+
+.features {
+    padding: 50px 0;
+}
+
+.feature-item {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #040720;
+}
+
+.feature-item i {
+    font-size: 48px;
+    color: #007bff;
+    margin-bottom: 20px;
+}
+
+.feature-item h3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.btn-primary {
+    background-color: #040720;
+    color: white;
+}
+
+div .home_book_btn {
+    color: black;
+    text-transform: uppercase;
+    background: #ffffff;
+    height: 45px;
+    border: 2px solid #20bf6b;
+    border-radius: 6px;
+    display: inline-block;
+    transition: all 0.3s ease 0s;
+    font-weight: bolder;
+    padding-top: 2%;
+}
+
+div .home_book_btn:hover {
+    color: white;
+    background-color: #20bf6b;
+    font-weight: bolder;
+    transition: all 0.3s ease 0s;
+}
+
+
+.facility-item {
+    margin-bottom: 30px;
+}
+
+.facility-item .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.facility-item .card-body {
+    padding: 20px;
+}
+
+.facility-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px;
+}
+
+.facility-item .icon-hover {
+    transition: transform 0.3s ease;
+}
+
+.facility-item .card:hover .icon-hover {
+    transform: scale(1.2);
+}
+
+.facility-item h4 {
+    font-size: 20px;
+    color: #040720;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.facility-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+.facility-item .card-body i {
+    color: #FFA500;
+    transition: color 1s ease;
+}
+
+.facility-item .card:hover .card-body i {
+    color: #982b1c;
+}
+
+
+.custom-carousel-caption {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: #fff;
+    text-align: left;
+}
+
+.custom-carousel-caption h5 {
+    font-size: 24px;
+    font-weight: bold;
+}

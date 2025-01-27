@@ -1,0 +1,476 @@
+        .menu-section {
+            margin-top: 2rem;
+        }
+
+        .restorant_card {
+            opacity: 1;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 5%;
+            width: 100%;
+            height: 450px;
+            margin-top: -10%;
+        }
+
+        @media (max-width: 1200px) {
+            .menu-section .cardsss {
+                display: block;
+               }
+        }
+
+        .restorant_cardN {
+            opacity: 1;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 5%;
+            width: 100%;
+            height: 450px;
+            margin-top: 0%;
+        }
+
+        .restorant_cardM {
+            opacity: 1;
+            transform: translateX(-50px);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+            margin-left: 5%;
+            width: 100%;
+            height: 450px;
+            margin-top: 3%;
+        }
+
+        .btn-custom-success {
+            background: #800000;
+            transition: border-color 0.3s ease;
+            border-color: #28a745;
+            border: 2px solid;
+            border-color: black;
+            color: white;
+            font-weight: bold;
+        }
+
+        .btn-custom-success:hover {
+            color: black;
+            border-color: white;
+            /* Blue border on hover */
+            background-color: #FFA500;
+        }
+
+        .button-group {
+
+            align-items: left;
+            margin-top: 40px;
+        }
+
+        .alert {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .alert.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel-item img {
+            height: 1000px;
+            object-fit: cover;
+        }
+
+        .custom-carousel-caption {
+            position: absolute;
+            bottom: 230px;
+            font-family: Times New Roman, Times, serif;
+            left: 37%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .custom-carousel-caption h5 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        .Privious_btn {
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .Next_btn {
+            position: absolute;
+            top: 35%;
+            transform: translateY(-50%);
+            background-color: rgba(255, 255, 255, 0.5);
+            border: none;
+            cursor: pointer;
+            font-size: 24px;
+            padding: 10px;
+        }
+
+        .slider {
+            position: relative;
+            max-height: 665px;
+            margin: auto;
+            overflow: hidden;
+        }
+        .btn-info {
+            background-color: #040720;
+            border-color: #007bff;
+            color: #f8f9fa;
+        }
+
+        .btn-info:hover {
+            background-color: #040720;
+            text-decoration: wavy;
+            text-decoration: underline;
+            color: #FFA500;
+        }
+
+        /* Common styles for both buttons */
+        button.prev,
+        button.next {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 10;
+            background: rgba(0, 0, 0, 0.5);
+            color: #f8f9fa;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        /* Hover effect */
+        button.prev:hover,
+        button.next:hover {
+            background: #800000;
+            color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+
+        button.prev {
+            left: 20px;
+        }
+
+        button.next {
+            right: 20px;
+        }
+
+        @media (max-width: 768px) {
+
+            button.prev,
+            button.next {
+                width: 40px;
+                height: 40px;
+                font-size: 16px;
+            }
+
+            button.prev {
+                left: 10px;
+            }
+
+            button.next {
+                right: 10px;
+            }
+        }
+
+
+        .top_header h2 {
+            margin-top: -2rem;
+            font-size: 1.7rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+        }
+
+        .top_header img {
+            width: 11rem;
+            margin-left: 42%;
+            margin-top: -3rem;
+        }
+
+        @media (max-width: 992px) {
+            .top_header img {
+                margin-left: 38%;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .top_header img {
+                margin-left: 35%;
+            }
+        }
+
+        .text {
+            text-align: justify;
+            font-size: 17px;
+        }
+
+        .footer {
+            background-color: #800000;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .columns {
+            gap: 1rem;
+        }
+
+        .columns h5 {
+            margin-left: -5rem;
+            text-decoration: underline;
+        }
+
+        .footer ul {
+            padding-left: 0;
+            list-style-type: none;
+            gap: 10px;
+        }
+
+        @media(max-width: 1199px) {
+            .restorant_card .Privious_btn {
+                margin-top: 40%;
+            }
+
+            .restorant_card .Next_btn {
+                margin-top: 40%;
+            }
+        }
+
+        .Privious_btn {
+            margin-top: 40%;
+        }
+
+        .Next_btn {
+            margin-top: 40%;
+        }
+
+        /* EVENT  CSS PART */
+
+        .btn-info {
+            background-color: #040720;
+            border-color: #007bff;
+            color: #f8f9fa;
+        }
+
+        .btn-info:hover {
+            background-color: #040720;
+            text-decoration: wavy;
+            text-decoration: underline;
+            color: #FFA500;
+        }
+
+        div .Submit-btn {
+            transition: border-color 0.3s ease;
+            background: #800000;
+            border: 2px solid white;
+            width: 150px;
+            color: #f0f4f8;
+            font-weight: bold;
+            margin-top: 16.5rem;
+        }
+
+        div .Submit-btn:hover {
+            border-color: #800000;
+            background-color: #FFA500;
+        }
+
+        .button-group {
+            align-items: left;
+            margin-top: 40px;
+        }
+
+        .alert {
+            display: none;
+            transition: opacity 0.5s ease;
+        }
+
+        .alert.show {
+            display: block;
+            opacity: 1;
+        }
+
+        .carousel-item img {
+            height: 1000px;
+            object-fit: cover;
+        }
+
+        .custom-carousel-caption {
+            position: absolute;
+            bottom: 230px;
+            font-family: Times New Roman, Times, serif;
+            left: 34%;
+            color: #fff;
+            text-align: center;
+        }
+
+        .custom-carousel-caption h5 {
+            font-size: 30px;
+            font-weight: bold;
+        }
+
+        .carousel-caption {
+            background-color: rgba(4, 7, 32, 0.5);
+            width: 100%;
+            height: 36rem;
+            margin-left: -15%;
+            margin-bottom: -2%;
+        }
+
+        div .Continue_btn {
+            padding: 10px 20px;
+            border-color: white;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Times New Roman', Times, serif;
+        }
+
+        div .Continue_btn:hover {
+            border-color: white;
+            background-color: #800000;
+        }
+
+        .slider {
+            position: relative;
+            max-height: 665px;
+            margin: auto;
+            overflow: hidden;
+        }
+
+        .restourant_slides {
+            display: flex;
+            flex-wrap: nowrap;
+            overflow: hidden;
+            position: relative;
+            transition: transform 0.5s ease-in-out;
+        }
+
+        .custom-carousel-item {
+            position: relative;
+            width: 100%;
+            flex-shrink: 0;
+        }
+
+        .custom-carousel-item img {
+            width: 100%;
+            max-height: 600px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .custom-carousel-caption {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+            color: white;
+            text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+        }
+
+        .custom-carousel-caption h5 {
+            font-size: 3rem;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-family: 'Georgia', serif;
+            margin-bottom: 1rem;
+        }
+
+        .Explore_btn {
+            padding: 10px 20px;
+            background-color: transparent;
+            border: 2px solid white;
+            color: white;
+            text-transform: uppercase;
+            font-weight: bold;
+            text-decoration: none;
+            border-radius: 6px;
+            font-family: 'Times New Roman', Times, serif;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .Explore_btn:hover {
+            background-color: #800000;
+            color: white;
+            cursor: pointer;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .custom-carousel-caption h5 {
+                font-size: 2rem;
+            }
+
+            .Explore_btn {
+                padding: 8px 16px;
+            }
+        }
+
+        @media (max-width: 576px) {
+            .custom-carousel-caption h5 {
+                font-size: 1.5rem;
+            }
+
+            .Explore_btn {
+                padding: 6px 12px;
+            }
+        }
+
+
+        .head2 {
+            margin-top: -2rem;
+        }
+
+        .text {
+            text-align: justify;
+            font-size: 17px;
+        }
+
+        .footer {
+            background-color: #800000;
+            color: white;
+            padding: 20px 0;
+        }
+
+        .columns {
+            gap: 1rem;
+        }
+
+        .columns h5 {
+            margin-left: -5rem;
+            text-decoration: underline;
+        }
+
+        .footer ul {
+            padding-left: 0;
+            list-style-type: none;
+            gap: 10px;
+        }
+
+        .btn-info {
+            transition: border-color 0.3s ease;
+            background: #800000;
+            border: 2px solid white;
+            width: 150px;
+            color: #f0f4f8;
+            font-weight: bold;
+        }
+
+        .btn-info:hover {
+            border-color: #800000;
+            background-color: #FFA500;
+        }

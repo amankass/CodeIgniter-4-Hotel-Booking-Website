@@ -1,0 +1,78 @@
+
+.carousel-item img {
+    height: 750px; 
+    object-fit: cover; 
+}
+
+    .form-select:focus {
+            border-color: #007bff;
+            box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+        }
+
+   .signup_ui .registration-container {
+        width: 650px;
+        margin-top: 3%;
+        padding: 30px;
+        border-radius: 8px;
+        background-color: white;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .form-control:focus {
+        border-color: #007bff;
+        box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    }
+
+    div .signup_btn {
+        transition: border-color 0.3s ease; 
+        background: #800000;
+        border: 2px solid white;
+        width: 150px;
+        color: #f0f4f8;
+        font-weight: bold;
+    }
+
+    div .signup_btn:hover {
+        border-color: #800000; 
+        background-color: #FFA500;
+    }
+.text-start{
+    margin-top: -20px;
+}
+div .forget_link{
+    margin-top: -23px;
+}
+@media(max-width: 768px){
+    .signup_ui .registration-container{
+        margin-top:10%;
+    }
+}
+
+
+/* Login Css Part */
+div .login_btn {
+    transition: border-color 0.3s ease;
+    background: #800000;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+}
+
+div .login_btn:hover {
+    border-color: #800000;
+    background-color: #FFA500;
+}
+div .login-container {
+    width: 450px;
+    margin-top: 50px;
+    padding: 30px;
+    border-radius: 8px;
+    background-color: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+div .form-control:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}

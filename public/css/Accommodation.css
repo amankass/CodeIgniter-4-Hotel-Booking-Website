@@ -1,0 +1,199 @@
+body {
+    background-color: #f8f9fa;
+}
+
+/* Upper Header Styling */
+
+.upper-header {
+    background-color: #800000;
+    color: #f8f9fa;
+    padding: 5px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 60px;
+    z-index: 1030;
+    /* Above the main navbar */
+    transition: background-color 0.3s ease;
+}
+
+.upper-header .navbar-text {
+    color: #f8f9fa;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.upper-header .nav-link {
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+.upper-header .nav-link:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+
+/* Main Navbar Styling */
+.main-navbar {
+    background-color: #800000;
+    color: #FFD700;
+    padding: 10px 0;
+    position: fixed;
+    top: 55px;
+    width: 100%;
+    z-index: 1020;
+    transition: opacity 0.3s ease;
+}
+
+.main-navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.main-navbar .navbar-brand:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.main-navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.main-navbar .nav-link:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+
+/* Book Now Button Styling */
+
+.book-btn {
+    transition: border-color 0.3s ease;
+    background: url(klematis.jpg) repeat;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+}
+
+.book-btn:hover {
+    border-color: white;
+    background-color: #FFA500;
+}
+
+
+/* Carousel Styling (If any) */
+.carousel-item img {
+    height: 750px;
+    object-fit: cover;
+}
+
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: #800000;
+    border: none;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: transparent;
+    color: #FFA500;
+    border: none;
+}
+
+.main-navbar .nav-link.dropdown-toggle:hover,
+.main-navbar .nav-link.dropdown-toggle:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+
+/* Adjustments for Responsive Upper Header */
+@media (max-width: 768px) {
+    .upper-header .navbar-text {
+        font-size: 12px;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .nav-item.dropdown .dropdown-toggle::after {
+        transform: rotate(-180deg);
+    }
+
+    .upper-header .ms-auto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .upper-header i {
+        font-size: 9px;
+    }
+
+    .main-navbar {
+        top: 55px;
+    }
+
+    .main-navbar .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+}
+
+.standard-rooms-section {
+    background-color: #f8f9fa;
+}
+
+.room-item .card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.room-item .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.room-item .card-img-left,
+.room-item .card-img-right {
+    width: 50%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    height: auto;
+    object-fit: cover;
+}
+
+.room-item .card-body {
+    padding: 20px;
+    width: 50%;
+}
+
+.room-item .card-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: #982b1c;
+}
+
+.room-item .card-text {
+    margin-bottom: 20px;
+}

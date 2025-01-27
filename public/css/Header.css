@@ -1,0 +1,155 @@
+body {
+    background-color: #f8f9fa;
+    padding-top: 70px;
+    overflow-x: hidden;
+}
+
+/* Upper Header Styling */
+.upper-header {
+    background-color: #800000;
+    color: #f8f9fa;
+    padding: 5px 0;
+    position: fixed;
+    margin-top: -4.4rem;
+    height: 60px;
+    z-index: 1030;
+    transition: background-color 0.3s ease;
+
+}
+
+.upper-header .navbar-text {
+    color: #f8f9fa;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.upper-header .nav-link {
+    color: #f8f9fa;
+    transition: color 0.3s ease;
+}
+
+.upper-header .nav-link:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+/* Main Navbar Styling */
+.main-navbar {
+    background-color: #800000;
+    color: #FFD700;
+    padding: 10px 0;
+    position: fixed;
+    z-index: 1020;
+    transition: opacity 0.3s ease;
+    margin-top: 0rem;
+}
+
+.main-navbar .navbar-brand {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    transition: color 0.3s ease;
+}
+
+.main-navbar .navbar-brand:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+.main-navbar .nav-link {
+    color: #ffffff;
+    font-weight: 500;
+    margin-right: 15px;
+    transition: color 0.3s ease;
+}
+
+.main-navbar .nav-link:hover {
+    color: #FFA500;
+    text-decoration: none;
+}
+
+/* Book Now Button Styling */
+div .book-btn {
+    transition: border-color 0.3s ease;
+    background: url(klematis.jpg) repeat;
+    border: 2px solid white;
+    width: 150px;
+    color: #f0f4f8;
+    font-weight: bold;
+}
+
+div .book-btn:hover {
+    border-color: white;
+    background-color: #FFA500;
+}
+
+.carousel-item img {
+    height: 750px;
+    object-fit: cover;
+}
+
+
+ul .dropdown-menu {
+    background-color: #800000;
+    border: none;
+}
+
+ul .dropdown-item {
+    color: #ffffff;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+ul .dropdown-item:hover {
+    background-color: transparent;
+    color: #FFA500;
+    border: none;
+}
+
+.main-navbar .nav-link.dropdown-toggle:hover,
+.main-navbar .nav-link.dropdown-toggle:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/* Adjustments for Responsive Upper Header */
+@media (max-width: 768px) {
+    .upper-header .navbar-text {
+        font-size: 12px;
+    }
+
+    .main-navbar {
+        margin-top: -3.5rem;
+    }
+
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0;
+    }
+
+    .nav-item.dropdown .dropdown-toggle::after {
+        transform: rotate(-180deg);
+    }
+
+    .upper-header .ms-auto {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .upper-header i {
+        font-size: 9px;
+    }
+
+    .main-navbar {
+        top: 55px;
+    }
+
+    .main-navbar .nav-link {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .navbar-nav {
+        gap: 10px;
+    }
+}
